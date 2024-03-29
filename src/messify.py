@@ -16,7 +16,7 @@ def fDemessify(fp):
 
 
 def messify(string):
-    cache = {} 
+    cache = {}
     new_string = ""
 
     for character in string:
@@ -52,6 +52,3 @@ def demessify(string):
         solved_string += cache[c]
 
     return solved_string
-
-# a lambda function just to print a messified file
-pdm = lambda x: print(fDemessify(open(x)))
