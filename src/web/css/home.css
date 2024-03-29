@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  font-family: monospace;
+  padding: 0;
+}
+
+h1 {
+  background-color: rgb(37, 37, 37);
+  color: rgb(122, 246, 131);
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: monospace;
+  text-transform: uppercase;
+  font-size: 5rem;
+  padding: 0.5rem 0.5rem;
+  position: sticky;
+  top: 0px;
+}
+
+label,
+p,
+ul {
+  font-size: 1.5rem;
+}
+
+.container {
+  margin: 2%;
+  padding: 1rem 1rem;
+}
+
+label {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  color: red;
+}
+
+.cards {
+  margin: 20px 0;
+}
+
+#why-ip>ul {
+  list-style-type: '- ';
+  font-weight: bold;
+  margin-left: 5%;
+}
+
+.cards>p {
+  padding-left: 40px;
+  padding-top: 5px;
+  text-align: justify;
+}
+
+#get-started {
+  width: 100%;
+  background-color: rgb(37, 37, 37);
+  padding: 0.5rem .5rem;
+  position: fixed;
+  display: flex;
+  justify-content: space-between; 
+  left: 0;
+  bottom: 0;
+  color: rgb(122, 246, 131);
+  font-size: 2rem;
+}
+
+#get-started > .btn {
+  background-color: transparent;
+  color: rgb(122, 246, 131);
+  font-size: 2rem;
+  border: none;
+  padding: 4px;
+  margin: 0 50px;
+}
+
+#get-started > .btn:hover {
+  outline:solid rgb(122, 246, 131) 4px ;
+  padding: 4px;
+}

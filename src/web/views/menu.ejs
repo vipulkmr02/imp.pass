@@ -1,0 +1,83 @@
+<html>
+
+  <head>
+    <title>IMP.PASS</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial;
+    }
+
+    footer {
+      font-size: .6rem;
+      display: flex;
+      position: absolute;
+      background-color: black;
+      left: 0;
+      color: white;
+      bottom: 0;
+      right: 0;
+    }
+
+    footer>a {
+      color: white;
+    }
+
+    body {
+      background: url(./images/2.jpg);
+      height: 100%;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 20%;
+      top: 20%;
+      text-align: center;
+    }
+
+    div>a {
+      font-size: 50px;
+      color: rgb(250, 251, 253);
+      text-decoration: none;
+      padding: 5px;
+    }
+
+    div>a:hover {
+      /* color: black; */
+      /* background-color: #ffffff; */
+      /* border: none; */
+      outline: solid white 1px;
+      color: white;
+      border-radius: 2px;
+    }
+
+    a:hover {
+      color: black;
+    }
+  </style>
+
+  <body>
+    <div>
+      <a href="/set">SET</a>
+      <a href="/get">GET</a>
+      <a href="/update">UPDATE</a>
+      <a href="/delete">DELETE</a>
+      <a href="/logout">LOG OUT</a>
+    </div>
+  </body>
+  <footer>
+    <a target="_blank" href="https://icons8.com/icon/101593/unlock-private">Unlock Private </a> icon by <a
+      target="_blank" href="https://icons8.com"> Icons8 </a>
+      <div id="username"></div>
+  </footer>
+
+</html>

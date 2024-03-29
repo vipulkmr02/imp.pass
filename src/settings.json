@@ -1,0 +1,13 @@
+{
+    "commandMode": 1,
+    "echoOn": 1,
+    "letPasswordStill": 0,
+    "vanishTime": 2,
+    "logDir" : "../logs",
+    "databaseHost" : "localhost",
+    "databaseUser" : "root",
+    "databasePassword" : "root",
+    "databasePort": 3306,
+    "docker-db": true,
+    "historyDir": "/home/lupiv/.history-imp.pass/"
+}

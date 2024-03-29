@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Encrypters</title>
+	</head>
+
+	<style>
+:root {
+	--button-bg-color: rgb(55, 234, 115);
+}
+
+* {
+	font-family: monospace;
+	font-size: 1.5rem;
+	color:white;
+	margin: 0;
+	padding: 0;
+}
+
+  #form {
+	  color: #ffffff;
+  }
+
+  #footer {
+	  display: flex;
+	  position: absolute;
+	  bottom: 0px;
+	  left: 0px;
+	  margin: 0px;
+	  justify-content: center;
+	  padding: 0px;
+	  width: 100%;
+  }
+
+  #footer>a {
+	  color: white;
+	  text-decoration: none;
+	  font-size: .8rem;
+  }
+
+  #footer>a:hover {
+	  outline: solid white 1px;
+  }
+
+  body {
+	  display: flex;
+	  background-color: rgb(13, 13, 13);
+	  background-size: cover;
+	  align-items: center;
+	  justify-content: center;
+	  flex-direction: column;
+	  height: 100vh;
+  }
+
+
+
+  .buttons {
+	  display: flex;
+	  justify-content: center;
+  }
+
+  .buttons>button {
+	  margin: 20px;
+	  background-color: transparent;
+	  border: none;
+	  cursor: pointer;
+	  font-family: monospace;
+	  padding: 10px;
+	  transition: border .5s;
+	  /* box-shadow: 5px 5px 10px rgba(116, 115, 115, 0.7); */
+  }
+
+  .buttons>button:hover,
+  .buttons>button:focus {
+	  border-bottom: rgb(55, 234, 115) 2px solid;
+	  color: rgb(55, 234, 115);
+  }
+
+  .text-fields>input {
+	  border: none;
+	  color: white;
+	  background-color: transparent;
+	  border-bottom: 2px rgb(55, 234, 115) solid;
+  }
+
+  .text-fields>input:focus {
+	  border-bottom: 2px #ffffff solid;
+  }
+
+  h1{
+	  position: absolute;
+	  color:black;
+	  background-color: white;
+	  top: 20px;
+  }
+	</style>
+
+	<body>
+		<h1> = Login to IMP.PASS = </h1>
+		<div class="container">
+			<div id="form">
+				<form method="POST" action="/authorize">
+					<div class="text-fields" id="username-form">
+						<b><label>Username: </label></b>
+						<input type="text" size="15" name="username">
+					</div>
+
+					<div class="text-fields" id="pw-form">
+						<b><label>Password: </label></b>
+						<input type="password" size="15" name="password">
+					</div>
+
+					<div class="buttons">
+						<button class="submit-button" type="submit">Log in</button>
+						<button class="reset-button" type="reset">Reset</button>
+					</div>
+				</form>
+			</div>
+
+
+
+
+		</div>
+
+	</body>
+
+</html>
+
+<script>
+	console.log("hello world")
+</script>

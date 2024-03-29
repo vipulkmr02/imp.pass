@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link 
+        type="text/css"
+        rel="stylesheet" 
+        href="./node_modules/bootstrap/dist/css/bootstrap.min.css
+">
+
+  <head>
+    <title>IMP.PASS | Sign UP</title>
+  </head>
+
+  <style>
+    :root {
+      --button-bg-color: rgb(0, 255, 85);
+    }
+
+    * {
+      font-family: Arial;
+      font-size: 1.4rem;
+    }
+
+    #form {
+      color: #000000;
+    }
+
+    #footer {
+      display: flex;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      margin: 0px;
+      justify-content: center;
+      padding: 0px;
+      width: 100%;
+    }
+    
+    #footer > a {
+      color: white;
+      text-decoration: none;
+      font-size: .8rem;
+    }
+
+    #footer > a:hover {
+      outline: solid white 1px;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .heading {
+        background: white;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .buttons>button {
+      margin: 20px;
+      background-color: black;
+      color: #DEFCF9;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: Arial;
+      padding: 10px;
+      transition: border .5s;
+      /* box-shadow: 5px 5px 10px rgba(116, 115, 115, 0.7); */
+    }
+    
+  </style>
+
+  <body>
+      <div class="heading">
+          <h1>= Sign UP for IMP.PASS =</h1>
+      </div>
+    <div id="form">
+      <form method="POST" action="/signup">
+        <div class="text-fields" id="username-form">
+          <strong><label>Username </label></strong>
+          <input type="text" size="15" class="form-control" name="username">
+        </div>
+
+        <div class="text-fields" id="pw-form">
+          <strong><label>Password: </label></strong>
+          <input class="form-control" type="password" size="15" name="password">
+        </div>
+
+        <div class="buttons">
+          <button class="submit-button" type="submit">Sign UP</button>
+          <button class="reset-button" type="reset">Reset</button>
+        </div>
+      </form>
+
+        
+
+      <div id="footer">
+        <a href="login.html">Login</a>
+      </div>
+
+    </div>
+
+  </body>
+
+</html>

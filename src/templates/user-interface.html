@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<style>
+  :root {
+    /*
+      l: Light
+      c: Color 
+      f: Foreground
+      b: Background
+      h: highlight
+    */
+    --lcb: #eff;
+    --lcf: #211;
+    --dcb: #eff;
+    --dcf: #211;
+    --hlc: #05193a;
+  }
+
+  .header {
+    text-align: center;
+    color: gold;
+    background-color: var(--lcb);
+  }
+
+  .horizontal-content {
+    display: flex;
+    flex-direction: row;
+  }
+</style>
+{% endblock %}
+
+{% block links %}
+<script src="{{ url_for('static', filename='ui-script.js') }}" />
+{% endblock %}
+
+{% block body %}
+
+<div class="header">
+  <div class="header-content"> IMP.PASS </div>
+</div>
+
+<div class="horizontal-content">
+{% for pswd in passwords %}
+{{ }}
+{% endfor %}
+
+</div>
+
+{% endblock %>}

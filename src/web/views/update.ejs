@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMP.PASS: UPDATE</title>
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    color: rgb(209, 209, 45);
+    background-color: rgb(44, 41, 41);
+    border: none;
+    font-family: Arial;
+  }
+
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin: 50px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 75%;
+    align-items: center;
+  }
+
+  form>* {
+    margin: 5px;
+  }
+
+  input {
+    border-bottom: wheat 2px solid;
+    padding: 3px;
+    text-align: center;
+  }
+
+  input:focus {
+    /* background-color: white; */
+    outline: none;
+    /* border-color: black; */
+    /* color:black; */
+  }
+
+  input,
+  form {
+    color: wheat;
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 2rem;
+    margin: 20px;
+  }
+
+  #message {
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    background-color: black;
+    color: white;
+    text-align:center;
+    width: 100%;
+    font-size: 1rem;
+    padding: 2px;
+    font-family: "Hack";
+  }
+
+  #message::selection {
+    background-color: white;
+    color: black;
+  }
+</style>
+
+<body>
+  <h1>UPDATE</h1>
+  <form action="/update-password" method="POST">
+    <label for="pi">PID </label>
+    <input type="text" name="PID" id="pid">
+
+    <label for="pwd">Password </label>
+    <input type="password" name="pwd" id="password">
+
+    <button class="submit-button" type="submit">SUBMIT</button>
+
+  </form>
+  <footer id="message"><%= locals.msg || "Any Server response will be shown here. triple click anywhere to clear the current message" %></footer>
+
+</body>
+
+</html>
+<script src="clear_message.js"></script>

@@ -1,0 +1,17 @@
+:root {
+  /* Light Color Foreground: lcf */
+  --lcf: #eff; 
+  --lcb: #211;
+  --dcb: #eff;
+  --dcf: #211;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--lcb);
+  color: var(--lcf);
+}

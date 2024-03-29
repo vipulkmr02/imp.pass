@@ -1,0 +1,21 @@
+<html>
+
+  <head>
+    <title> {{ title }} </title>
+  </head>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='base-styles.css') }}">
+
+  {% block styles %}
+  {% endblock %}
+
+  </style>
+  {% block links %}
+  {% endblock %}
+
+  <body>
+    {% block body %}
+    {% endblock %}
+  </body>
+
+</html>
