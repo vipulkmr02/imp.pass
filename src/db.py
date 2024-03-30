@@ -1,6 +1,6 @@
 import mysql.connector as mysql
 import commons
-# import unittest
+
 
 DBTYPE = "MySQL"
 
@@ -27,7 +27,8 @@ class Database:
     def __exit__(self):
         self.cursor.close()
 
-    def connect(self, user: str, passwd: str, host=commons.settings["databaseHost"]):
+    def connect(self, user: str, passwd: str,
+                host=commons.settings["databaseHost"]):
         """
         Creates a connection with the database
         and initializes the cursor object for the database
@@ -112,19 +113,24 @@ class Database:
 
     def write(self, *values, table, where=None):
         if len(values) == 0:
-            commons.logger.warn("Attempted to INSERT without specifying values")
+            commons.logger.warn(
+                "Attempted to INSERT without specifying values"
+            )
             return -1
 
         if where is None:
             self.execute(f"INSERT INTO {table} VALUES ({str(values)[1:-1]})")
         else:
             self.execute(
-                f"INSERT INTO {table} VALUES ({str(values)[1:-1]}) where={where}"
+                f"INSERT INTO {table} VALUES ({str(values)[1:-1]})"
+                f"where={where}"
             )
 
     def grant_permissions(self, *permissions, user, host, sql_obj):
         if len(permissions) == 0:
-            commons.logger.warn("Attempted to GRANT permissions without specifying them")
+            commons.logger.warn(
+                "Attempted to GRANT permissions without specifying them"
+            )
             return -1
 
         sql_query = "GRANT %s ON %s TO '%s'@'%s'" % (
@@ -143,7 +149,9 @@ class Database:
 
     def revoke_permissions(self, user, host, sql_obj, *permissions):
         if len(permissions) == 0:
-            commons.logger.warn("Attempted to GRANT permissions without specifying them")
+            commons.logger.warn(
+                "Attempted to GRANT permissions without specifying them"
+            )
             return -1
         sql_query = "REVOKE %s ON %s FROM %s@%s" % (
             ", ".join(p for p in permissions),
@@ -163,4 +171,5 @@ class Database:
         self.execute(f"DROP USER '{user}'@'{host}'")
 
     def create_user(self, user, host, password):
-        self.execute(f"CREATE USER '{user}'@'{host}' IDENTIFIED BY '{password}'")
+        self.execute(f"CREATE USER '{user}'@'{host}' "
+                     f"IDENTIFIED BY '{password}'")

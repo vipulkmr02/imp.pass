@@ -70,7 +70,7 @@ def echoAndLog(message: str, level: int):
     print(f"{level}: {message}")
 
 
-def readMess(fname: str) -> dict:
+def readMess(fname: str):
     """
     Returns the demessifed contents of a messified file
 

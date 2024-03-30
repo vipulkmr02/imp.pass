@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-import commons
-import db
+import commons as commons
+import db as db
 import encryption as enc
 import accounts as acc
 import history

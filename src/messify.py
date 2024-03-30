@@ -1,11 +1,15 @@
 from math import log
+import os.path as path
+
+DIRECTORY = '.mess'
 
 
 def fMessify(filename):
-    fp = open(filename)
+    fpath = path.join(DIRECTORY, filename)
+    fp = open(fpath)
     messified = messify(fp)
     fp.close()
-    fp = open(filename, 'b')
+    fp = open(fpath, 'b')
     fp.seek(0)
     fp.write(messified)
     fp.close()
@@ -20,7 +24,6 @@ def messify(string):
     new_string = ""
 
     for character in string:
-        # storing the log value of each character
         if character not in cache:
             cache[character] = str(log(ord(character), len(string)))
             new_string += cache[character] + "-"
