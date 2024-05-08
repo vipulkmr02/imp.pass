@@ -1,9 +1,9 @@
+#!/usr/bin/env python3
+
 import commandHandler as ch
 from getpass import getpass
-
 # from json import load
 from os import system as sys, name as os_name
-
 # import datetime
 import commons
 
@@ -39,7 +39,8 @@ user_credentials = (
     else getpass("password"),
 )
 
-if ch.login(*user_credentials) == 0:
+breakpoint()
+if ch.login(*user_credentials) == 3:
     clear_screen()
     print("USER not found")
     signup = "y" == input("Do you want to sign up(y/n)")

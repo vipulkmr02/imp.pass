@@ -1,0 +1,16 @@
+activate.sh
+logs/
+.idea/
+.vscode/
+.*
+.txt
+.md
+__pycache__/
+HOSTS
+creds
+data
+rules
+thoughts
+!/.gitignore
+SQL.py
+CredFile*

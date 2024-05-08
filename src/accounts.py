@@ -6,16 +6,14 @@ import db
 def authorize(username: str, password: str) -> bool:
     """
     Checks whether the user and password combination is correct or not
+    This doesn't perform any checking whether the user is in the database
+    or not.
 
     :param username:
     :param password:
     """
 
     commons.logger.info(f"Authorizing {username}")
-
-    if user_check(username) is False:
-        commons.echoAndLog(30, f"{username} does not exists")
-        return False
 
     CREDS = commons.messToJson("creds")
     DATA = commons.messToJson("data")
@@ -132,6 +130,7 @@ def sign_up(user: str, password: str):
     )
 
     master_db.close()
+    return 0
 
 
 def user_check(username: str) -> bool:
@@ -161,7 +160,6 @@ def delete_user(username: str) -> int:
     master_db.connect(
         user=CRED["master"]["username"], passwd=CRED["master"]["password"]
     )
-    # sql = f"DELETE FROM users WHERE username='{username}'"
     master_db.cursor.execute(multi=True)
     master_db.cursor.commit()
     master_db.close()
@@ -177,3 +175,4 @@ def delete_user(username: str) -> int:
         passwd=CRED["salt"]["password"]
     ) as cur:
         cur.execute(f"delete from a where username='{username}'")
+    return 0
