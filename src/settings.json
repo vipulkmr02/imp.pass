@@ -10,5 +10,4 @@
     "databasePort": 3306,
     "docker-db": true,
     "historyDir": "/home/lupiv/.history-imp.pass/",
-    "clients": 5
 }
