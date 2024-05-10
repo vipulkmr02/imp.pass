@@ -31,7 +31,7 @@ machine, reason is, **It does not interfere with my OS's softwares and
 dependencies**. Using the given scripts, setting up a MySQL database server is a breeze.
 
 
-# How to Use Scripts:
+## How to Use Scripts:
 
 - `db-script`: Creates a Docker container of MySQL database server if you
   don't have the MySQL server docker image, don't worry Docker will pull it out
@@ -52,6 +52,7 @@ dependencies**. Using the given scripts, setting up a MySQL database server is a
 
 
 ## Running the project
+
 - STEP-1: run `db-script.sh`
 - STEP-2: run `db-reset.sh`
 - STEP-3: run setup-venv script based on your OS to create & setup virtual 
