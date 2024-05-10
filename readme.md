@@ -33,12 +33,12 @@ dependencies**. Using the given scripts, setting up a MySQL database server is a
 
 # How to Use Scripts:
 
-- `db-script.sh`: Creates a Docker container of MySQL database server if you
+- `db-script`: Creates a Docker container of MySQL database server if you
   don't have the MySQL server docker image, don't worry Docker will pull it out
   for you :). Notice that you can change the password of the database sever by
   editing the script.
 
-- `reset.sh`: Creates all the schemas in the database. If your database gets
+- `db-reset`: Creates all the schemas in the database. If your database gets
   messed up, you can reset your schemas with this script. This script will show
   you an error message if you just ran it after running the `db-script.sh`
   because it takes some time to setup the docker database. Generally it will
@@ -47,17 +47,13 @@ dependencies**. Using the given scripts, setting up a MySQL database server is a
   container of the database server. If it's not running (`docker ps`). Brew it
   up again using the `db-script.sh`.
 
-- activate.sh: Activates the python virtual environment. If you're on
-  Windows. you need to create your own virtual environment and make sure to
-  install those requirements using the following command:
-  `python3 -m pip install -r requirements.txt`
-  **OR**
-  `pip install -r requirements.txt`.
+- `setup-venv`: Creates the virtual environment needed for the project, also 
+  installs all of the dependencies.
 
-**WARNING: The virtual environment(ip) here is according to a Linux environment**
 
 ## Running the project
 - STEP-1: run `db-script.sh`
-- STEP-2: run `reset.sh`
-- STEP-3: activate `virtual environment`
-- STEP-4: run the interpreter script in the src directory
+- STEP-2: run `db-reset.sh`
+- STEP-3: run setup-venv script based on your OS to create & setup virtual 
+  environment
+- STEP-4: go to the `src` directory and run interpreter.py
