@@ -1,4 +1,4 @@
-### IMP.PASS developer's guide
+# IMP.PASS developer's guide
 
 
 ## What is IMP.PASS
