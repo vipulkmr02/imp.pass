@@ -39,8 +39,7 @@ user_credentials = (
     else getpass("password"),
 )
 
-breakpoint()
-if ch.login(*user_credentials) == 3:
+if ch.login(*user_credentials) == 1:
     clear_screen()
     print("USER not found")
     signup = "y" == input("Do you want to sign up(y/n)")
