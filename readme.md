@@ -8,16 +8,7 @@ using the interpreter one can retrieve his/her passwords and can save their
 passwords.
 
 
-## Goals
-
-- A server for it, like a web server that sends and receives requests.
-- Users should be able to change their master passwords.
-- Users should be able to export their passwords.
-- A Web based UI
-- A Qt based UI
-
-
-## How to use
+## How to setup
 
 To use IMP.PASS, you will need a MySQL databse to store the data, You will have
 to install a MySQL server and also modify the `src/settings.json` according to
@@ -26,35 +17,44 @@ your server's address. Change the `databaseHost` to your server's host and
 your server's credentials. After configuring the `settings.json` 
 
 If you're unable to setup the database server. You can use Docker to create a
-MySQL database server. Docker is what I use to manage my MySQL server on my
-machine, reason is, **It does not interfere with my OS's softwares and
-dependencies**. Using the given scripts, setting up a MySQL database server is a breeze.
+MySQL container. Docker is what I used to develop this project on my machine
+MySQL server on my machine, reason is, **It does not interfere with my OS's
+softwares and dependencies**. Using the given scripts, setting up a MySQL
+server container is a breeze.
 
 
 ## How to Use Scripts:
 
-- `db-script`: Creates a Docker container of MySQL database server if you
+- `mysql-container`: Creates a Docker container of MySQL database server if you
   don't have the MySQL server docker image, don't worry Docker will pull it out
-  for you :). Notice that you can change the password of the database sever by
+  for you. Notice that you can change the password of the database sever by
   editing the script.
 
 - `db-reset`: Creates all the schemas in the database. If your database gets
   messed up, you can reset your schemas with this script. This script will show
-  you an error message if you just ran it after running the `db-script.sh`
+  you an error message if you just ran it after running the `mysql-container.sh`
   because it takes some time to setup the docker database. Generally it will
   not take more tha 3-4 tries to reach the database, but if running the script
   2nd time also gives the same error message then you should check the docker
-  container of the database server. If it's not running (`docker ps`). Brew it
-  up again using the `db-script.sh`.
+  container of the database server using `docker ps`.
 
-- `setup-venv`: Creates the virtual environment needed for the project, also 
-  installs all of the dependencies.
+- `setup-venv`: Creates the python virtual environment, also installs all of the
+  necessary dependencies.
 
 
 ## Running the project
 
-- STEP-1: run `db-script.sh`
+- STEP-1: run `mysql-container.sh`
 - STEP-2: run `db-reset.sh`
 - STEP-3: run setup-venv script based on your OS to create & setup virtual 
   environment
 - STEP-4: go to the `src` directory and run interpreter.py
+
+
+## Goals
+
+- A socket-based-server for it, like a web server that sends and receives requests.
+- Users should be able to change their master passwords.
+- Users should be able to export their passwords.
+- A Web based UI
+- A Qt based UI
