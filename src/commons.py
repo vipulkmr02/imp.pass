@@ -7,7 +7,7 @@ import messify
 from sys import exc_info
 import socket
 
-settings = json.load(open("settings.json"))
+settings = json.load(open("config.json"))
 
 selected_host = settings["databaseHost"]
 

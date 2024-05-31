@@ -1,8 +1,14 @@
 bcrypt==4.1.2
+blinker==1.8.2
 certifi==2024.2.2
 charset-normalizer==3.3.2
+click==8.1.7
 crypto==1.4.1
+Flask==3.0.3
 idna==3.6
+itsdangerous==2.2.0
+Jinja2==3.1.4
+MarkupSafe==2.1.5
 mysql-connector-python==8.4.0
 Naked==0.1.32
 netifaces==0.11.0
@@ -12,3 +18,4 @@ requests==2.31.0
 shellescape==3.8.1
 simple-term-menu==1.6.4
 urllib3==2.2.0
+Werkzeug==3.0.3

@@ -1,11 +1,8 @@
-# IMP.PASS developer's guide
-
-
 ## What is IMP.PASS
 
-Imp.pass is a simple password manager. It currently only saves your passwords &
-using the interpreter one can retrieve his/her passwords and can save their
-passwords.
+Imp.pass is a simple password manager. It currently only saves your passwords by
+encrypting them based on your master password. It's interfaces are under
+progress. It can also be used as a private password vault on a private network.
 
 
 ## How to setup
@@ -38,17 +35,14 @@ server container is a breeze.
   2nd time also gives the same error message then you should check the docker
   container of the database server using `docker ps`.
 
-- `setup-venv`: Creates the python virtual environment, also installs all of the
-  necessary dependencies.
 
+## Running the Interpreter (CLI)
 
-## Running the project
-
-- STEP-1: run `mysql-container.sh`
-- STEP-2: run `db-reset.sh`
-- STEP-3: run setup-venv script based on your OS to create & setup virtual 
-  environment
-- STEP-4: go to the `src` directory and run interpreter.py
+- STEP-0: Create a Virutal Environment by `python3 -m venv venv`.
+- STEP-1: Install all required python packages by `pip install -r requirements.txt`.
+- STEP-2: Run `mysql-container.sh` to setup MySQL container (SKIP if having a DB already).
+- STEP-3: Run `db-reset.sh` to create Schemas.
+- STEP-4: go to the `src` directory and run interpreter.py.
 
 
 ## Goals
